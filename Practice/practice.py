@@ -1,376 +1,455 @@
 
-import sqlite3
-import json
-name = "Bilal"
-age = 25
-university = "Saarland University Saarbrucken"
-cgpa = 3.16
-is_student = True
-is_Employee = False
-print(f"My name is {name}. I am {age} years old. I study at {university}. My CGPA is {cgpa}. Is student: {is_student}. Is employee: {is_Employee}. \n")
+# import sqlite3
+# import json
 
-total = age * cgpa
-print(total)
 
-city = "Saarbrucken"
-print(f"\n I live in {city}.")
+# name = "Bilal"
+# age = 25
+# university = "Saarland University Saarbrucken"
+# cgpa = 3.16
+# is_student = True
+# is_Employee = False
+# print(f"My name is {name}. I am {age} years old. I study at {university}. My CGPA is {cgpa}. Is student: {is_student}. Is employee: {is_Employee}. \n")
 
-MODEL = "LLAMA 3.2"
-DB = "SQLITE3"
+# total = age * cgpa
+# print(total)
 
-print(f"{MODEL} + {DB}")
+# city = "Saarbrucken"
+# print(f"\n I live in {city}.")
 
+# MODEL = "LLAMA 3.2"
+# DB = "SQLITE3"
 
-def sayHello(name):
-    print(f"Hello {name}")
+# print(f"{MODEL} + {DB}")
 
 
-sayHello("Nimra")
+# def sayHello(name):
+#     print(f"Hello {name}")
 
 
-def multiply(a, b):
-    return a*b
+# sayHello("Nimra")
 
 
-response = multiply(4, 9)
-print(f"Multiplication result: {response}")
+# def multiply(a, b):
+#     return a*b
 
 
-def GTP(city):
+# response = multiply(4, 9)
+# print(f"Multiplication result: {response}")
 
-    prices = {
-        "islamabad": 100,
-        "karachi": 600
-    }
-    return prices.get(city.lower())
 
+# def GTP(city):
 
-print(GTP("Islamabad"))
+#     prices = {
+#         "islamabad": 100,
+#         "karachi": 600
+#     }
+#     return prices.get(city.lower())
 
 
-def calculate_square(number):
-    return number * number
+# print(GTP("Islamabad"))
 
 
-n = 5
-m = 10
+# def calculate_square(number):
+#     return number * number
 
-calculate_square(n)
-calculate_square(m)
 
-print(f"Square of {n} is: {calculate_square(n)}")
-print(f"Square of {m} is: {calculate_square(m)}")
+# n = 5
+# m = 10
 
+# calculate_square(n)
+# calculate_square(m)
 
-# Dictionaries
+# print(f"Square of {n} is: {calculate_square(n)}")
+# print(f"Square of {m} is: {calculate_square(m)}")
 
-student = {
-    "name": "Bilal",
-    "age": 25,
-    "university": "Air University Islamabad"
-}
 
-for intro, data in student.items():
-    print(intro, data)
+# # Dictionaries
 
-print(student)
+# student = {
+#     "name": "Bilal",
+#     "age": 25,
+#     "university": "Air University Islamabad"
+# }
 
-print(student["name"])
+# for intro, data in student.items():
+#     print(intro, data)
 
-print(student.get("age"))
+# print(student)
 
-ticket_prices = {
-    "london": 799,
-    "berlin": 599,
-    "paris": 699
-}
+# print(student["name"])
 
-print(ticket_prices["london"])
-print(ticket_prices["berlin"])
+# print(student.get("age"))
 
-student = {
-    "name": "Bilal",
-    "age": 23
-}
+# ticket_prices = {
+#     "london": 799,
+#     "berlin": 599,
+#     "paris": 699
+# }
 
-for intro, data in student.items():
-    print(intro, data)
+# print(ticket_prices["london"])
+# print(ticket_prices["berlin"])
 
-print(student.get("name"))
-print(student.get("age"))
+# student = {
+#     "name": "Bilal",
+#     "age": 23
+# }
 
-print(student.get("cgpa", "Unknown"))
+# for intro, data in student.items():
+#     print(intro, data)
 
-print(student.get("dubai", "Unknown"))
+# print(student.get("name"))
+# print(student.get("age"))
 
-print(student.get("city", "Unknown City"))
+# print(student.get("cgpa", "Unknown"))
 
-ticket_price = {
-    "london": 8989,
-    "islamabad": 9080980,
-    "newyork": 898989
-}
+# print(student.get("dubai", "Unknown"))
 
-for city, price in ticket_price.items():
-    print(f"{city} and {price}")
-    print(city, price)
+# print(student.get("city", "Unknown City"))
 
+# ticket_price = {
+#     "london": 8989,
+#     "islamabad": 9080980,
+#     "newyork": 898989
+# }
 
-student_marks = {
-    "Math": 90,
-    "English": 85,
-    "Python": 95
-}
+# for city, price in ticket_price.items():
+#     print(f"{city} and {price}")
+#     print(city, price)
 
-for subjects, marks in student_marks.items():
-    print(subjects, marks)
 
-name = "BILAL"
+# student_marks = {
+#     "Math": 90,
+#     "English": 85,
+#     "Python": 95
+# }
 
-print(name.lower())
+# for subjects, marks in student_marks.items():
+#     print(subjects, marks)
 
-city = "islamabad"
+# name = "BILAL"
 
-if city.lower() == "kahuta":
-    print("You selected kahuta")
-elif city.lower() == "paris":
-    print("You selected paris")
-else:
-    print("Mistake Bro")
+# print(name.lower())
 
+# city = "islamabad"
 
-def get_tickets_price(city):
-    price = {
-        "london": 8989,
-        "paris": 8989
-    }
-    city = city.lower()
-    print(price.get(city, "Unknown"))
+# if city.lower() == "kahuta":
+#     print("You selected kahuta")
+# elif city.lower() == "paris":
+#     print("You selected paris")
+# else:
+#     print("Mistake Bro")
 
 
-get_tickets_price("London")
-get_tickets_price("Berlin")
+# def get_tickets_price(city):
+#     price = {
+#         "london": 8989,
+#         "paris": 8989
+#     }
+#     city = city.lower()
+#     print(price.get(city, "Unknown"))
 
-country = "PAKISTAN"
 
-if (country.lower() == "pakistan"):
-    print("Correct Country")
+# get_tickets_price("London")
+# get_tickets_price("Berlin")
 
-# Json dumps loads
+# country = "PAKISTAN"
 
+# if (country.lower() == "pakistan"):
+#     print("Correct Country")
 
-student = {
-    "name": "Bilal",
-    "age":  23
-}
+# # Json dumps loads
 
-json_string = json.dumps(student)
-print(json_string)
-print(type(json_string))
 
-json_string = '{"name": "Bilal" , "age":23}'
+# student = {
+#     "name": "Bilal",
+#     "age":  23
+# }
 
-print(json.loads(json_string))
+# json_string = json.dumps(student)
+# print(json_string)
+# print(type(json_string))
 
-print(student)
-print(student["name"])
+# json_string = '{"name": "Bilal" , "age":23}'
 
-arguments = '{"city" : "london" , "passengers": 2}'
+# print(json.loads(json_string))
 
-data = json.loads(arguments)
+# print(student)
+# print(student["name"])
 
-print(data["city"])
+# arguments = '{"city" : "london" , "passengers": 2}'
 
-print(data["passengers"])
+# data = json.loads(arguments)
 
-student = {
-    "name": "Bilal",
-    "course": "Python",
-    "level": "Beginner"
-}
+# print(data["city"])
 
-studentData = json.dumps(student)
+# print(data["passengers"])
 
-print(studentData)
+# student = {
+#     "name": "Bilal",
+#     "course": "Python",
+#     "level": "Beginner"
+# }
 
-studentDataB = json.loads(studentData)
+# studentData = json.dumps(student)
 
-print(studentDataB)
+# print(studentData)
 
-print(studentDataB["name"])
+# studentDataB = json.loads(studentData)
 
-# List
+# print(studentDataB)
 
-fruits = ["apple", "banana", "mango"]
-print(fruits)
+# print(studentDataB["name"])
 
-print(fruits[0])
-print(fruits[2])
+# # List
 
-for fruit in fruits:
-    print(fruit)
+# fruits = ["apple", "banana", "mango"]
+# print(fruits)
 
-models = [
-    "Llama",
+# print(fruits[0])
+# print(fruits[2])
 
-    "Qwen",
+# for fruit in fruits:
+#     print(fruit)
 
-    "GPT"
-]
+# models = [
+#     "Llama",
 
-print(models[0])
-print(models[-1])
+#     "Qwen",
 
-for model in models:
-    print(model)
+#     "GPT"
+# ]
 
-fruits = ["apple", "banana"]
-fruits.append("mango")
-print(fruits)
+# print(models[0])
+# print(models[-1])
 
-numbers = [1, 2, 3]
-numbers.append(4)
-print(numbers)
+# for model in models:
+#     print(model)
 
-responses = []
-responses.append("Hello")
-responses.append("AI Chatgpt ")
-print(responses)
+# fruits = ["apple", "banana"]
+# fruits.append("mango")
+# print(fruits)
 
-models = []
+# numbers = [1, 2, 3]
+# numbers.append(4)
+# print(numbers)
 
-models.append("Llama")
-models.append("Qwen")
-models.append("GPT")
-print(models)
+# responses = []
+# responses.append("Hello")
+# responses.append("AI Chatgpt ")
+# print(responses)
 
-languages = []
-languages.append("Python")
-languages.extend(["German", "English"])
-MoreAdditions = ["French", "Spanish"]
-languages.extend(MoreAdditions)
-print(languages)
+# models = []
 
+# models.append("Llama")
+# models.append("Qwen")
+# models.append("GPT")
+# print(models)
 
-temperature = 35
+# languages = []
+# languages.append("Python")
+# languages.extend(["German", "English"])
+# MoreAdditions = ["French", "Spanish"]
+# languages.extend(MoreAdditions)
+# print(languages)
 
-if temperature > 30:
-    print("It is hot")
-else:
-    print("Its not hot")
 
+# temperature = 35
 
-count = 1
+# if temperature > 30:
+#     print("It is hot")
+# else:
+#     print("Its not hot")
 
-while count < 3:
-    print(count)
-    count += 1
 
-number = 1
+# count = 1
 
-while count <= 5:
-    print(count)
-    count += 1
+# while count < 3:
+#     print(count)
+#     count += 1
 
-languages = ["German", "English"]
-for lan in languages:
-    print(lan)
+# number = 1
+
+# while count <= 5:
+#     print(count)
+#     count += 1
+
+# languages = ["German", "English"]
+# for lan in languages:
+#     print(lan)
+
+# # with open("example.txt", "w") as f:
+# #     f.write("Hello Bilal")
+
+# # with open("example.txt" , "r") as f:
+# #     f.read()
 
 # with open("example.txt", "w") as f:
-#     f.write("Hello Bilal")
-
-# with open("example.txt" , "r") as f:
-#     f.read()
-
-with open("example.txt", "w") as f:
-    f.write("Hello Bilal Done ")
+#     f.write("Hello Bilal Done ")
 
 
-# with sqlite3.connect("prices.db") as connection:
+# # with sqlite3.connect("prices.db") as connection:
+# #     cursor = connection.cursor()
+
+# #     cursor.execute(
+# #         "CREATE TABLE IF NOT EXISTS prices (city TEXT, price INTEGER)")
+# #     cursor.execute(
+# #         "INSERT OR IGNORE INTO prices (city , price) VALUES ('london' , 999)")
+
+# #     cursor.execute("Select * from prices")
+
+# #     results = cursor.fetchall()
+
+# #     for row in results:
+# #         print(f"City : {row[0]}, Price: ${row[1]}")
+
+# # with sqlite3.connect("prices.db") as connection:
+# #     cursor = connection.cursor()
+# #     cursor.execute(
+# #         "CREATE TABLE IF NOT EXISTS prices(city TEXT , price  INTEGER)")
+# #     cityName = "London , Berlin , Paris"
+# #     cityPrice = 999 , 978 , 565
+# #     cursor.execute(
+# #         "INSERT OR IGNORE INTO prices(city , price) VALUES(? , ?) ", (cityName, cityPrice))
+
+# #     searchCity = "london"
+# #     cursor.execute("SELECT price FROM prices where city = ?", (searchCity,))
+
+# #     result = cursor.fetchone()
+
+# # if result:
+# #     print(f"{result[0]}")
+# # else:
+# #     print(f"Error")
+
+# with sqlite3.connect("school.db") as connection:
 #     cursor = connection.cursor()
 
-#     cursor.execute(
-#         "CREATE TABLE IF NOT EXISTS prices (city TEXT, price INTEGER)")
-#     cursor.execute(
-#         "INSERT OR IGNORE INTO prices (city , price) VALUES ('london' , 999)")
+# cursor.execute("DROP TABLE IF EXISTS students")
 
-#     cursor.execute("Select * from prices")
+# cursor.execute("""
+#     CREATE TABLE IF NOT EXISTS students
+#    (name TEXT,  age INTEGER , city TEXT)""")
 
-#     results = cursor.fetchall()
+# nameData = "Ali"
+# ageData = 7989
+# cityData = "Karachi"
+# cursor.execute(
+#     "INSERT OR IGNORE INTO students(name, age , city) VALUES(?,?,?)", (nameData, ageData, cityData))
 
-#     for row in results:
-#         print(f"City : {row[0]}, Price: ${row[1]}")
+# nameUser = "Ali"
+# cityUser = "Karachi"
 
-# with sqlite3.connect("prices.db") as connection:
-#     cursor = connection.cursor()
-#     cursor.execute(
-#         "CREATE TABLE IF NOT EXISTS prices(city TEXT , price  INTEGER)")
-#     cityName = "London , Berlin , Paris"
-#     cityPrice = 999 , 978 , 565
-#     cursor.execute(
-#         "INSERT OR IGNORE INTO prices(city , price) VALUES(? , ?) ", (cityName, cityPrice))
+# cursor.execute("SELECT age  FROM students WHERE name = ? AND city = ?",
+#                (nameUser, cityUser))
 
-#     searchCity = "london"
-#     cursor.execute("SELECT price FROM prices where city = ?", (searchCity,))
+# result = cursor.fetchall()
 
-#     result = cursor.fetchone()
+# print(result)
 
 # if result:
-#     print(f"{result[0]}")
+#     print(f"{result[0][0]}")
 # else:
-#     print(f"Error")
+#     print("Error")
 
-with sqlite3.connect("school.db") as connection:
-    cursor = connection.cursor()
 
-cursor.execute("DROP TABLE IF EXISTS students")
+# age = 20
 
-cursor.execute("""
-    CREATE TABLE IF NOT EXISTS students
-   (name TEXT,  age INTEGER , city TEXT)""")
+# status = "Adult" if age >= 20 else "Minnor"
+# print(status)
 
-nameData = "Ali"
-ageData = 7989
-cityData = "Karachi"
-cursor.execute(
-    "INSERT OR IGNORE INTO students(name, age , city) VALUES(?,?,?)", (nameData, ageData, cityData))
+# finish_reason = "stop"
+# message = "AI finished" if finish_reason == "stop" else "AI working"
+# print(message)
 
-nameUser = "Ali"
-cityUser = "Karachi"
+# age = 20
+# if age >= 20:
+#     statuss = "Adult"
+# else:
+#     statuss = "Minnor"
 
-cursor.execute("SELECT age  FROM students WHERE name = ? AND city = ?",
-               (nameUser, cityUser))
+# print(statuss)
 
-result = cursor.fetchall()
+# # Index
 
-print(result)
+# universityStudent = ("Bilal", 3.16, "SaarlandUniversity")
 
-if result:
-    print(f"{result[0][0]}")
-else:
-    print("Error")
+# print(universityStudent[0])
+# print(universityStudent[1])
 
+
+# Python classes and objects:
+from openai import OpenAI
+import requests
+# from pydantic import BaseModel
+
+
+# class Item(BaseModel):
+#     title: str
+#     price: float
+
+
+# iphone = Item(title="Iphone-18", category="apple", price=65)
+# print(iphone.title)
+
+
+# url = "https://httpbin.org/post"
+
+# payload = {"role": "user", "content": "Hello I am Bilal"}
+
+# response = requests.post(url, payload)
+# print(response.status_code)
+# print(response.json())
+
+
+# client = OpenAI(base_url="http://localhost:11434/v1", api_key="Anything")
+
+# response = client.chat.completions.create(
+#     model="llama3.2",
+#     messages=[{
+#         "role": "user", "content": "Hello illama what is api"
+#     }]
+# )
+
+# print(response.choices[0].message.content)
+
+
+class Item:
+    def __init__(self, title: str, category: str, prices: int):
+        self.title = title
+        self.category = category
+        self.prices = prices
+
+    def __repr__(self) -> str:
+        return f"<{self.title} = ${self.prices}>"
+
+
+item = Item(title="Phone", category="Electronics", prices=500)
+
+print(item)
 
 age = 20
 
-status = "Adult" if age >= 20 else "Minnor"
+status = "Adult" if age >= 20 else "Mirror"
 print(status)
 
-finish_reason = "stop"
-message = "AI finished" if finish_reason == "stop" else "AI working"
-print(message)
 
-age = 20
-if age >= 20:
-    statuss = "Adult"
-else:
-    statuss = "Minnor"
+class Dog:
+    def __init__(self, name, breed) -> str:
+        self.name = name
+        self.breed = breed
 
-print(statuss)
+    @classmethod
+    def from_string(cls, dog_str: str):
+        name, breed = dog_str.split("-")
+        return cls(name, breed)
 
-# Index
+    @staticmethod
+    def calculate_human_years(dog_age: int) -> int:
+        return dog_age * 6
 
-universityStudent = ("Bilal", 3.16, "SaarlandUniversity")
 
-print(universityStudent[0])
-print(universityStudent[1])
+newDog = Dog.from_string("Muhammad-Bilal")
+newDog = Dog.calculate_human_years(8)
+
+#########################################
